@@ -1,19 +1,51 @@
-# employees-list-vue
+# Список контактов
 
-## Project setup
-```
-yarn install
-```
+Тестовое задание "Список контактов" написанное на Vue.js
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Установка
 
-### Compiles and minifies for production
-```
-yarn build
+Для запуска приложения у себя на копмьютере из командной строки выполните:
+
+```shell
+npm install
+npm run serve
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Эти команды установят необходимые зависимости, а также запустят приложение.
+
+## Установка json-server
+
+Для того чтобы создать мок бэкенда установите `json-server`:
+
+```shell
+npm install -g json-server
+json-server --watch db.json
+```
+
+Эти команды установят `json-server`, а также будут следить за изменениями в файле `db.json`.
+
+Пример файла `db.json`:
+
+```shell
+{
+    "user": { "username": "admin", "name": "Администратор", "token": "21232f297a57a5a743894a0e4a801fc3" },
+    "contacts": [
+        { "id": 1, "name": "John Doe", "email": "john@doe.com", "phone": "+1 23456789" },
+        { "id": 2, "name": "Jane Doe", "email": "jane@doe.com", "phone": "+1 23456789" }
+    ]
+}
+```
+
+
+
+## Сборка
+
+Для сборки проекта из командной строки выполните:
+
+```shell
+npm run build
+```
+
+Эта комнда создаст готовы для деплоя на сервер файлы.
+
+
